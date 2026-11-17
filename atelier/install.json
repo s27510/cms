@@ -1,0 +1,8 @@
+{
+    "name": "Atelier Cafe",
+    "description": "Collection checkout, simulated payment and table reservation",
+    "code": "atelier",
+    "version": "1.0.0",
+    "author": "Atelier Team",
+    "link": ""
+}

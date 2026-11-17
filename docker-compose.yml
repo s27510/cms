@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    ports: ["127.0.0.1:8080:80"]
+    volumes:
+      - ./opencart:/var/www/html
+      - ./my_plugin:/var/www/html/extension/my_plugin
+      - ./storage:/var/www/storage
+    depends_on: [db]
+    restart: unless-stopped
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: opencart
+      MARIADB_USER: oc
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes: [dbdata:/var/lib/mysql]
+    restart: unless-stopped
+volumes:
+  dbdata:
