@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -Eeuo pipefail
 
 ARCHIVE="${1:?Usage: $0 <opencart-backup_*.tar>}"

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -Eeuo pipefail
 
 PROJECT_DIR="${PROJECT_DIR:-$HOME/shop}"
